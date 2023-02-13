@@ -1,4 +1,4 @@
-import RandomSequence.ExportType;
+// import RandomSequence.ExportType;
 
 public class linventif {
     private static final Boolean devMode = true;
@@ -10,7 +10,13 @@ public class linventif {
         } else {
             // String[] test = new String[]{"Java", "C", "Php"};
             // Parameter.main(test);
-            RandomSequence.main(10, 2, "REAL");
+            // RandomSequence.main(10, 2, "REAL");
+            int[][] test = new int[][]{
+                {1, 2},
+                {2, 0},
+            };
+            Irregular ir = new Irregular(test);
+            ir.display();
         }
     }
     public static void PrintTable(String[] table){
