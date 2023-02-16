@@ -26,25 +26,22 @@ public class Card {
         this.color = color;
     }
 
-    public boolean compareColor(Card otherCard) {
-        return this.color == otherCard.color;
+    public int compareColor(Card otherCard) {
+        return this.color.ordinal() - otherCard.color.ordinal();
     }
 
-    public boolean compareRank(Card otherCard) {
-        return this.rank == otherCard.rank;
+    public int compareRank(Card otherCard) {
+        return this.rank.ordinal() - otherCard.rank.ordinal();
     }
 
-    public Card isBefore(Card otherCard) {
-        if (this.rank.ordinal() < otherCard.rank.ordinal()) {
-            return this;
-        }
-        return otherCard;
+    public boolean isBefore(Card otherCard) {
+        return this.rank.ordinal() < otherCard.rank.ordinal();
     }
 
     public boolean equals(Object otherCard) {
         if (otherCard instanceof Card) {
             Card other = (Card) otherCard;
-            return compareColor(other) && compareRank(other);
+            return this.color == other.color && this.rank == other.rank;
         }
         return false;
     }
