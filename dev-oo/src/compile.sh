@@ -4,7 +4,7 @@
 folder=$1
 
 # compile all .java of the option path
-javac -d bin $folder/*.java
+javac -d ../bin $folder/*.java
 
 # Print all files compiled
 echo "Files compiled: "
